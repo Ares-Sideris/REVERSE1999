@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2391</width>
+    <height>1179</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>REVERSE 1999 Translator v.0.2.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnOpen">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>40</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Открыть CSV</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSave">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>40</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить CSV</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>40</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Все</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Переведено</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Не переведено</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>40</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Фильтр</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAutoTranslate">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>410</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Авто-перевод</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnStats">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>410</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Статистика</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtSearch">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>40</y>
+      <width>301</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnFind">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>40</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Поиск</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="tree">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>2311</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <attribute name="headerMinimumSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="headerDefaultSectionSize">
+     <number>400</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>File</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Новый столбец</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Character</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>EnglishText</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>RussianTranslation</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QCheckBox" name="chkHideDone">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Скрывать завершённые</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableGlossary">
+    <property name="geometry">
+     <rect>
+      <x>1610</x>
+      <y>460</y>
+      <width>431</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnImportGlossary">
+    <property name="geometry">
+     <rect>
+      <x>2070</x>
+      <y>460</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Импорт глоссария</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExportGlossary">
+    <property name="geometry">
+     <rect>
+      <x>2210</x>
+      <y>460</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Экспорт глоссария</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAddTerm">
+    <property name="geometry">
+     <rect>
+      <x>2070</x>
+      <y>590</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Добавить термин</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRemoveTerm">
+    <property name="geometry">
+     <rect>
+      <x>2210</x>
+      <y>590</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Удалить термин</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnApplyGlossary">
+    <property name="geometry">
+     <rect>
+      <x>2140</x>
+      <y>630</y>
+      <width>131</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Применить глоссарий</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>490</y>
+      <width>146</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="btnOpenDat">
+       <property name="text">
+        <string>Открыть .DAT</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExportAsset">
+       <property name="text">
+        <string>Экспорт выбранного</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExportAllAssets">
+       <property name="text">
+        <string>Экспорт всего</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2391</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>1000</width>
+     <height>300</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
